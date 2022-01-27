@@ -1,0 +1,171 @@
+# Reading pref.tcl
+# do Multiplicador_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying D:/Quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Multiplicador.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:33:56 on Jan 27,2022
+# vcom -reportprogress 300 -93 -work work Multiplicador.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneiv_atom_pack
+# -- Loading package cycloneiv_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity multiplicador
+# -- Compiling architecture structure of multiplicador
+# End time: 09:33:57 on Jan 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/Quartus/quartus/bin64/Multiplicador/multiplicador_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:33:57 on Jan 27,2022
+# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus/bin64/Multiplicador/multiplicador_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity multiplicador_tb
+# -- Compiling architecture tb of multiplicador_tb
+# ** Warning: D:/Quartus/quartus/bin64/Multiplicador/multiplicador_tb.vhd(12): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneiv_atom_pack
+# -- Loading package cycloneiv_components
+# -- Loading entity multiplicador
+# End time: 09:33:57 on Jan 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vsim -t 1ps -L altera_mf -L altera -L lpm -L sgate -L cycloneiv_hssi -L cycloneiv_pcie_hip -L cycloneiv -L gate_work -L work -voptargs="+acc"  multiplicador_tb
+# vsim -t 1ps -L altera_mf -L altera -L lpm -L sgate -L cycloneiv_hssi -L cycloneiv_pcie_hip -L cycloneiv -L gate_work -L work -voptargs=""+acc"" multiplicador_tb 
+# Start time: 09:33:57 on Jan 27,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneiv.cycloneiv_atom_pack(body)
+# Loading cycloneiv.cycloneiv_components
+# Loading work.multiplicador_tb(tb)
+# Loading work.multiplicador(structure)
+# Loading work.hard_block(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiv.cycloneiv_io_obuf(arch)
+# Loading cycloneiv.cycloneiv_io_ibuf(arch)
+# Loading cycloneiv.cycloneiv_clkctrl(vital_clkctrl)
+# Loading cycloneiv.cycloneiv_ena_reg(behave)
+# Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 10029 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 2160 ns
+vsim -t 1ps -L altera_mf -L altera -L lpm -L sgate -L cycloneiv_hssi -L cycloneiv_pcie_hip -L cycloneiv -L gate_work -L work -voptargs=\"+acc\" work.multiplicador_tb -sdfnoerror -sdftyp /UUT/multiplicador=D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo
+# End time: 09:34:30 on Jan 27,2022, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 1
+# vsim -t 1ps -L altera_mf -L altera -L lpm -L sgate -L cycloneiv_hssi -L cycloneiv_pcie_hip -L cycloneiv -L gate_work -L work -voptargs=""+acc"" work.multiplicador_tb -sdfnoerror -sdftyp "/UUT/multiplicador=D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo" 
+# Start time: 09:34:31 on Jan 27,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneiv.cycloneiv_atom_pack(body)
+# Loading cycloneiv.cycloneiv_components
+# Loading work.multiplicador_tb(tb)
+# Loading work.multiplicador(structure)
+# Loading work.hard_block(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiv.cycloneiv_io_obuf(arch)
+# Loading cycloneiv.cycloneiv_io_ibuf(arch)
+# Loading cycloneiv.cycloneiv_clkctrl(vital_clkctrl)
+# Loading cycloneiv.cycloneiv_ena_reg(behave)
+# Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading instances from D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(443): Failed to find INSTANCE '\BlocoControlador|Selector1~0\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(847): Failed to find INSTANCE '\BlocoControlador|Selector3~0\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(272): Failed to find INSTANCE '\BlocoControlador|Selector8~0\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(284): Failed to find INSTANCE '\BlocoControlador|Selector8~0clkctrl\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(487): Failed to find INSTANCE '\BlocoControlador|WideOr1~0\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(499): Failed to find INSTANCE '\BlocoControlador|eProx.S1_142\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(817): Failed to find INSTANCE '\BlocoControlador|eProx.S2_133\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(861): Failed to find INSTANCE '\BlocoControlador|eProx.S3_124\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(293): Failed to find INSTANCE '\BlocoControlador|eProx.S4_115\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(457): Failed to find INSTANCE '\BlocoControlador|eProx.S5_106\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(891): Failed to find INSTANCE '\BlocoControlador|pronto~1\'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(169): Failed to find INSTANCE '\BlocoOperativo|regB|q[2]~feeder\'.
+# ** Warning: (vsim-SDF-3894) : Errors occured in reading and resolving instances from compiled SDF file(s).
+# Loading timing data from D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(169): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(272): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(273): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(284): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(293): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(294): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(295): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(443): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(444): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(445): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(457): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(458): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(459): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(487): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(488): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(499): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(500): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(501): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(817): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(818): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(819): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(847): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(848): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(849): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(861): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(862): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(863): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(891): Failed to find INSTANCE '<NULL>'.
+# ** Warning: (vsim-SDF-3250) D:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim/Multiplicador_6_1200mv_85c_vhd_slow.sdo(892): Failed to find INSTANCE '<NULL>'.
+# ** Warning: Design size of 10029 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb File: D:/Quartus/quartus/bin64/Multiplicador/multiplicador_tb.vhd
+add wave -position end  sim:/multiplicador_tb/entA
+add wave -position end  sim:/multiplicador_tb/entB
+add wave -position end  sim:/multiplicador_tb/saida
+add wave -position 2  sim:/multiplicador_tb/pronto
+add wave -position 0  sim:/multiplicador_tb/clk
+add wave -position 0  sim:/multiplicador_tb/Reset
+add wave -position 0  sim:/multiplicador_tb/inicio
+run 2160 ns
+# End time: 09:39:17 on Jan 27,2022, Elapsed time: 0:04:46
+# Errors: 0, Warnings: 43

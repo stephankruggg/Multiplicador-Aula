@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 10",
+		"os_version" : "10.0"
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "not_applicable",
+		"error_message" : "The calling function has passed an illegal FSTR_FLOW_ENUM",
+		"source_file" : "/quartus/h/fstr_flow_auto.cpp",
+		"line" : "1210",
+		"stack_trace" : "\t0x7ffb54ca46ed: CCL_ERR + 0x46ed (?err_report_internal_error@@YAXPEBD00H@Z + 0x2d)\n\t0x7ffb530476bf: CCL_FSTR + 0x76bf (?test_trait_of@FSTR_FLOW_TRANSLATOR@@QEBA_NW4FSTR_FLOW_ENUM@@W4FSTR_FLOW_TRAIT_ENUM@@@Z + 0x4f)\n\t0x7ffaeffa8fb8: resr_tmwq + 0x18fb8 (?flow_need_setup_assignment@TMWQ_TREE@@IEAA_NPEAV?$vector@UFLOW_INFO@@V?$allocator@UFLOW_INFO@@@std@@@std@@@Z + 0x58)\n\t0x7ffaeffb71dc: resr_tmwq + 0x271dc (?start_next_task@TMWQ_TREE@@IEAAX_N@Z + 0x94c)\n\t0x7ffaeffb6876: resr_tmwq + 0x26876 (?start@TMWQ_TREE@@IEAA_NPEAVTMWQ_ITEM@@@Z + 0x1d6)\n\t0x7ffaeffaf0bc: resr_tmwq + 0x1f0bc (?on_start@TMWQ_TREE@@IEAAXAEBVQModelIndex@@@Z + 0x39c)\n\t0x7ffaeffae382: resr_tmwq + 0x1e382 (?on_double_click_text@TMWQ_TREE@@QEAAXAEBVQModelIndex@@@Z + 0x122)\n\t 0x6131d1f0: QtCore4 + 0x11d1f0 (?activate@QMetaObject@@SAXPEAVQObject@@PEBU1@HPEAPEAX@Z + 0x520)\n\t 0x6195e599: QtGui4 + 0x46e599 (?doubleClicked@QAbstractItemView@@IEAAXAEBVQModelIndex@@@Z + 0x29)\n\t 0x61998eab: QtGui4 + 0x4a8eab (?mouseDoubleClickEvent@QTreeView@@MEAAXPEAVQMouseEvent@@@Z + 0x15b)\n\t 0x61551dd8: QtGui4 + 0x61dd8 (?event@QWidget@@MEAA_NPEAVQEvent@@@Z + 0xe8)\n\t 0x618754e6: QtGui4 + 0x3854e6 (?event@QFrame@@MEAA_NPEAVQEvent@@@Z + 0x36)\n\t 0x619687ec: QtGui4 + 0x4787ec (?viewportEvent@QAbstractItemView@@MEAA_NPEAVQEvent@@@Z + 0x4ac)\n\t0x7ffb267d4d76: GCL_AFCQ + 0xb4d76 (?viewportEvent@AFCQ_TREE_VIEW@@MEAA_NPEAVQEvent@@@Z + 0x2b6)\n\t 0x61310552: QtCore4 + 0x110552 (?sendThroughObjectEventFilters@QCoreApplicationPrivate@@QEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x82)\n\t 0x61512f81: QtGui4 + 0x22f81 (?notify_helper@QApplicationPrivate@@QEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0xe1)\n\t 0x61511b8e: QtGui4 + 0x21b8e (?notify@QApplication@@UEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x71e)\n\t 0x6130e67b: QtCore4 + 0x10e67b (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)\n\t 0x61515dee: QtGui4 + 0x25dee (?sendMouseEvent@QApplicationPrivate@@SA_NPEAVQWidget@@PEAVQMouseEvent@@00PEAPEAV2@AEAV?$QPointer@VQWidget@@@@_N@Z + 0x1de)\n\t 0x615769b0: QtGui4 + 0x869b0 (?trUtf8@QScrollBar@@SA?AVQString@@PEBD0H@Z + 0x1440)\n\t 0x6157a361: QtGui4 + 0x8a361 (?winMouseButtonUp@QApplication@@SAXXZ + 0x2761)\n\t0x7ffb6f9ae7e7: USER32 + 0xe7e7 (CallWindowProcW + 0x3f7)\n\t0x7ffb6f9ae228: USER32 + 0xe228 (DispatchMessageW + 0x258)\n\t 0x61333982: QtCore4 + 0x133982 (?processEvents@QEventDispatcherWin32@@UEAA_NV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x3e2)\n\t 0x61572074: QtGui4 + 0x82074 (?openPopup@QApplicationPrivate@@QEAAXPEAVQWidget@@@Z + 0x204)\n\t 0x6130b5db: QtCore4 + 0x10b5db (?exec@QEventLoop@@QEAAHV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x22b)\n\t 0x6130dbbf: QtCore4 + 0x10dbbf (?exec@QCoreApplication@@SAHXZ + 0xdf)\n\t0x7ff60db9198b: quartus + 0x198b (?qgq_main@@YAHHPEAPEBD@Z + 0x8b)\n\t0x7ffb551e3258: CCL_MSG + 0x13258 (?msg_main_thread@@YAPEAXPEAX@Z + 0x18)\n\t0x7ffb551e4a5e: CCL_MSG + 0x14a5e (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x6e)\n\t0x7ffb55316af0: ccl_mem + 0x16af0 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x70)\n\t0x7ffb551e2af1: CCL_MSG + 0x12af1 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0xa1)\n\t0x7ff60db92777: quartus + 0x2777 (WinMain + 0x127)\n\t0x7ff60db91f40: quartus + 0x1f40 (__tmainCRTStartup + 0x148)\n\t0x7ffb6f5f7033: KERNEL32 + 0x17033 (BaseThreadInitThunk + 0x13)\n\t0x7ffb71542650: ntdll + 0x52650 (RtlUserThreadStart + 0x20)\n",
+		"subsystem" : "FSTR"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "20.1.1",
+		"build" : "720",
+		"edition" : "Lite Edition"
+	}
+}

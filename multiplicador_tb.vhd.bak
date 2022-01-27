@@ -1,0 +1,74 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use std.textio.all;
+use ieee.std_logic_textio.all;
+
+entity multiplicador is
+end multiplicador;
+
+architecture tb of multiplicador is
+    constant clk_period: time := 20ns;
+	 signal inicio, Reset, clk: std_logic;
+	 signal entA, entB: std_logic_vector(3 downto 0);
+	 signal pronto: std_logic;
+	 signal saida: std_logic_vector(3 downto 0);
+
+begin
+    UUT : entity work.top port map 
+	            (inicio => inicio, Reset => Reset, clk => clk,
+					 entA => entA, entB => entB,
+					 pronto => pronto,
+					 saida => saida);
+
+    rst <= '1', '0' after clk_period/2;
+	 
+	 -- processo gerador de clock
+	 clk_gen : process
+        begin
+				clk <= '1';
+            wait for clk_period/2; -- 50% do periodo pra cada nivel
+				clk <= '0';
+				wait for clk_period/2;
+        end process;
+		  
+	 file_io: process
+		variable read_col_from_input_buf: line;
+		file input_buf: text;
+		variable write_col_to_output_buf: line;
+		file output_buf: text;
+		
+		variable val_A, val_B: std_logic_vector(3 downto 0);
+		variable val_Space: character;
+		
+		begin
+			file_open(input_buf, "D:\Quartus II\quartus\bin64\Multiplicador\entradas.txt", read_mode);
+			file_open(output_buf, "D:\Quartus II\quartus\bin64\Multiplicador\saidas_tb.txt", write_mode);
+			
+				wait until Reset = '0';
+		
+			while not endfile(input_buf) loop
+				readline(input_buf, read_col_from_input_buf);
+				read(read_col_from_input_buf, val_A);
+				read(read_col_from_input_buf, val_Space);
+				read(read_col_from_input_buf, val_B);
+				
+				A <= val_A;
+				B <= val_B;
+				
+				wait for clk_period;
+				write(write_col_to_output_buf, saida);
+				writeline(output_buf, write_col_to_output_buf);
+				
+			end loop;
+			
+			write(write_col_to_output_buf, string'("SIMULACAO CONCLUIDA"));
+			writeline(output_buf, write_col_to_output_buf);
+			
+			file_close(input_buf);
+			file_close(output_buf);
+			
+			wait;
+		end process;
+			 
+end tb;

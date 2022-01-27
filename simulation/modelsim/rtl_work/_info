@@ -1,0 +1,345 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus/quartus/bin64/Multiplicador/simulation/modelsim
+Ebc
+Z1 w1642427703
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 6
+R0
+Z4 8D:/Quartus/quartus/bin64/Multiplicador/bc.vhd
+Z5 FD:/Quartus/quartus/bin64/Multiplicador/bc.vhd
+l0
+L4 1
+V7zCH7=ZXdL^`5zVjhHebU2
+!s100 DGd^:=gdF;7R_LaIEe0nl0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1643138114
+!i10b 1
+Z8 !s108 1643138114.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus/bin64/Multiplicador/bc.vhd|
+Z10 !s107 D:/Quartus/quartus/bin64/Multiplicador/bc.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aestrutura
+R2
+R3
+DEx4 work 2 bc 0 22 7zCH7=ZXdL^`5zVjhHebU2
+!i122 6
+l21
+L18 80
+VUZYB<?AKm8V@dR[kaID0`1
+!s100 B;:h@`3FFMmSa:PFG8aKL2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebo
+Z13 w1643031879
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+!i122 5
+R0
+Z17 8D:/Quartus/quartus/bin64/Multiplicador/bo.vhd
+Z18 FD:/Quartus/quartus/bin64/Multiplicador/bo.vhd
+l0
+L6 1
+Vb5<A1nkO8kX:jaK37T5f03
+!s100 ;lcgaG3@QHAjFcB1lV<_B1
+R6
+31
+R7
+!i10b 1
+Z19 !s108 1643138113.000000
+Z20 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus/bin64/Multiplicador/bo.vhd|
+Z21 !s107 D:/Quartus/quartus/bin64/Multiplicador/bo.vhd|
+!i113 1
+R11
+R12
+Aestrutura
+R14
+R15
+R16
+R2
+R3
+DEx4 work 2 bo 0 22 b5<A1nkO8kX:jaK37T5f03
+!i122 5
+l55
+L21 52
+VFND4XC=5R2dEg>5mf]kOR3
+!s100 V8NYAR9^g4k:kJ3Fe?^<13
+R6
+31
+R7
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R11
+R12
+Eigualazero
+Z22 w1643031729
+R15
+R16
+R2
+R3
+!i122 4
+R0
+Z23 8D:/Quartus/quartus/bin64/Multiplicador/igualazero.vhd
+Z24 FD:/Quartus/quartus/bin64/Multiplicador/igualazero.vhd
+l0
+L5 1
+Vni7il4gf;D;^AN=;Yo7o_2
+!s100 VRk]04E;]GQRB3decCEa>0
+R6
+31
+Z25 !s110 1643138113
+!i10b 1
+R19
+Z26 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus/bin64/Multiplicador/igualazero.vhd|
+Z27 !s107 D:/Quartus/quartus/bin64/Multiplicador/igualazero.vhd|
+!i113 1
+R11
+R12
+Aestrutura
+R15
+R16
+R2
+R3
+DEx4 work 10 igualazero 0 22 ni7il4gf;D;^AN=;Yo7o_2
+!i122 4
+l15
+L11 7
+V127UZ[CJAMKWH_UKn3mWQ0
+!s100 SOB:oU[GAkAD?WO1?OR:K3
+R6
+31
+R25
+!i10b 1
+R19
+R26
+R27
+!i113 1
+R11
+R12
+Emultiplicador
+w1643032094
+R14
+R15
+R16
+R2
+R3
+!i122 7
+R0
+8D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd
+FD:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd
+l0
+L6 1
+VCeh[R^6aI5=Kog@W?C:j[1
+!s100 gX?Z?0WiaoPJ81>0jOD=40
+R6
+31
+R7
+!i10b 1
+R8
+!s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd|
+!s107 D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd|
+!i113 1
+R11
+R12
+Emux2para1
+Z28 w1643031683
+R2
+R3
+!i122 3
+R0
+Z29 8D:/Quartus/quartus/bin64/Multiplicador/mux2para1.vhd
+Z30 FD:/Quartus/quartus/bin64/Multiplicador/mux2para1.vhd
+l0
+L4 1
+VZ8iHU1<:zoKoUXfVeY^9n2
+!s100 o93PN<R31hoHH5eLgzH3f3
+R6
+31
+R25
+!i10b 1
+R19
+Z31 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus/bin64/Multiplicador/mux2para1.vhd|
+Z32 !s107 D:/Quartus/quartus/bin64/Multiplicador/mux2para1.vhd|
+!i113 1
+R11
+R12
+Acomportamento
+R2
+R3
+DEx4 work 9 mux2para1 0 22 Z8iHU1<:zoKoUXfVeY^9n2
+!i122 3
+l12
+L11 6
+VM6?Po2gT>X1>^_:_;Gzn[3
+!s100 czdPJ93BMjfZbdVjZ@R@31
+R6
+31
+R25
+!i10b 1
+R19
+R31
+R32
+!i113 1
+R11
+R12
+Eregistrador
+Z33 w1643031655
+R15
+R16
+R2
+R3
+!i122 2
+R0
+Z34 8D:/Quartus/quartus/bin64/Multiplicador/registrador.vhd
+Z35 FD:/Quartus/quartus/bin64/Multiplicador/registrador.vhd
+l0
+L5 1
+V7HW4SUn=0>8`WV?;IC3V]2
+!s100 ^Pd:4G7WAWI6`NS6Po`7K0
+R6
+31
+R25
+!i10b 1
+R19
+Z36 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus/bin64/Multiplicador/registrador.vhd|
+Z37 !s107 D:/Quartus/quartus/bin64/Multiplicador/registrador.vhd|
+!i113 1
+R11
+R12
+Aestrutura
+R15
+R16
+R2
+R3
+DEx4 work 11 registrador 0 22 7HW4SUn=0>8`WV?;IC3V]2
+!i122 2
+l13
+L12 9
+V=cTkXZkMi2A79D8:OWlR31
+!s100 GN5GbS;HQ<:kNX@n@MWP^1
+R6
+31
+R25
+!i10b 1
+R19
+R36
+R37
+!i113 1
+R11
+R12
+Eregistrador_r
+Z38 w1643031613
+R15
+R16
+R2
+R3
+!i122 1
+R0
+Z39 8D:/Quartus/quartus/bin64/Multiplicador/registrador_r.vhd
+Z40 FD:/Quartus/quartus/bin64/Multiplicador/registrador_r.vhd
+l0
+L5 1
+VU3MVS`kPzD6Q[mdezcf8V3
+!s100 GHGec5oYEzkQ;LG<KSgBY0
+R6
+31
+R25
+!i10b 1
+R19
+Z41 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus/bin64/Multiplicador/registrador_r.vhd|
+Z42 !s107 D:/Quartus/quartus/bin64/Multiplicador/registrador_r.vhd|
+!i113 1
+R11
+R12
+Aestrutura
+R15
+R16
+R2
+R3
+DEx4 work 13 registrador_r 0 22 U3MVS`kPzD6Q[mdezcf8V3
+!i122 1
+l13
+L12 11
+VnVg:;mVV`n33XALNA[j[`2
+!s100 ?WZYbGn9mPW`_Vh=R8o3G3
+R6
+31
+R25
+!i10b 1
+R19
+R41
+R42
+!i113 1
+R11
+R12
+Esomadorsubtrator
+Z43 w1643032091
+R15
+R16
+R2
+R3
+!i122 0
+R0
+Z44 8D:/Quartus/quartus/bin64/Multiplicador/somadorsubtrator.vhd
+Z45 FD:/Quartus/quartus/bin64/Multiplicador/somadorsubtrator.vhd
+l0
+L5 1
+VH9R7mC8B62kKBbG@>[HYc2
+!s100 =_^:Zd9cQTR^^:`>A7>K50
+R6
+31
+Z46 !s110 1643138112
+!i10b 1
+Z47 !s108 1643138112.000000
+Z48 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus/bin64/Multiplicador/somadorsubtrator.vhd|
+Z49 !s107 D:/Quartus/quartus/bin64/Multiplicador/somadorsubtrator.vhd|
+!i113 1
+R11
+R12
+Aestrutura
+R15
+R16
+R2
+R3
+DEx4 work 16 somadorsubtrator 0 22 H9R7mC8B62kKBbG@>[HYc2
+!i122 0
+l13
+L12 6
+Vm]8bOJl`z]ch[JEDeY>eV1
+!s100 HXF>STK]lj00N=;]h=Q7l3
+R6
+31
+R46
+!i10b 1
+R47
+R48
+R49
+!i113 1
+R11
+R12

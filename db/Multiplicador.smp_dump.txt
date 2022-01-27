@@ -1,0 +1,9 @@
+
+State Machine - |multiplicador|bc:BlocoControlador|eAtual
+Name eAtual.S5 eAtual.S4 eAtual.S3 eAtual.S2 eAtual.S1 eAtual.S0 
+eAtual.S0 0 0 0 0 0 0 
+eAtual.S1 0 0 0 0 1 1 
+eAtual.S2 0 0 0 1 0 1 
+eAtual.S3 0 0 1 0 0 1 
+eAtual.S4 0 1 0 0 0 1 
+eAtual.S5 1 0 0 0 0 1 

@@ -1,0 +1,503 @@
+Analysis & Synthesis report for Multiplicador
+Thu Jan 27 09:29:58 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |multiplicador|bc:BlocoControlador|eAtual
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |multiplicador
+ 12. Parameter Settings for User Entity Instance: bo:BlocoOperativo
+ 13. Parameter Settings for User Entity Instance: bo:BlocoOperativo|mux2para1:mux1
+ 14. Parameter Settings for User Entity Instance: bo:BlocoOperativo|registrador_r:regP
+ 15. Parameter Settings for User Entity Instance: bo:BlocoOperativo|registrador:regA
+ 16. Parameter Settings for User Entity Instance: bo:BlocoOperativo|registrador:regB
+ 17. Parameter Settings for User Entity Instance: bo:BlocoOperativo|igualazero:geraAz
+ 18. Parameter Settings for User Entity Instance: bo:BlocoOperativo|igualazero:geraBz
+ 19. Parameter Settings for User Entity Instance: bo:BlocoOperativo|mux2para1:mux2
+ 20. Parameter Settings for User Entity Instance: bo:BlocoOperativo|mux2para1:mux3
+ 21. Parameter Settings for User Entity Instance: bo:BlocoOperativo|somadorsubtrator:somasub
+ 22. Port Connectivity Checks: "bo:BlocoOperativo|mux2para1:mux3"
+ 23. Port Connectivity Checks: "bo:BlocoOperativo"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jan 27 09:29:58 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; Multiplicador                               ;
+; Top-level Entity Name              ; multiplicador                               ;
+; Family                             ; Cyclone IV GX                               ;
+; Total logic elements               ; 43                                          ;
+;     Total combinational functions  ; 38                                          ;
+;     Dedicated logic registers      ; 26                                          ;
+; Total registers                    ; 26                                          ;
+; Total pins                         ; 20                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total GXB Receiver Channel PCS     ; 0                                           ;
+; Total GXB Receiver Channel PMA     ; 0                                           ;
+; Total GXB Transmitter Channel PCS  ; 0                                           ;
+; Total GXB Transmitter Channel PMA  ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; multiplicador      ; Multiplicador      ;
+; Family name                                                      ; Cyclone IV GX      ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+; somadorsubtrator.vhd             ; yes             ; User VHDL File  ; D:/Quartus/quartus/bin64/Multiplicador/somadorsubtrator.vhd ;         ;
+; registrador_r.vhd                ; yes             ; User VHDL File  ; D:/Quartus/quartus/bin64/Multiplicador/registrador_r.vhd    ;         ;
+; registrador.vhd                  ; yes             ; User VHDL File  ; D:/Quartus/quartus/bin64/Multiplicador/registrador.vhd      ;         ;
+; mux2para1.vhd                    ; yes             ; User VHDL File  ; D:/Quartus/quartus/bin64/Multiplicador/mux2para1.vhd        ;         ;
+; igualazero.vhd                   ; yes             ; User VHDL File  ; D:/Quartus/quartus/bin64/Multiplicador/igualazero.vhd       ;         ;
+; bo.vhd                           ; yes             ; User VHDL File  ; D:/Quartus/quartus/bin64/Multiplicador/bo.vhd               ;         ;
+; bc.vhd                           ; yes             ; User VHDL File  ; D:/Quartus/quartus/bin64/Multiplicador/bc.vhd               ;         ;
+; multiplicador.vhd                ; yes             ; User VHDL File  ; D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd    ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 20               ;
+;                          ;                  ;
+; DSP block 9-bit elements ; 0                ;
+;                          ;                  ;
+; Maximum fan-out node     ; clk~input        ;
+; Maximum fan-out          ; 26               ;
+; Total fan-out            ; 221              ;
+; Average fan-out          ; 2.13             ;
++--------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name      ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------+------------------+--------------+
+; |multiplicador                   ; 38 (0)              ; 26 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0         ; 20   ; 0            ; |multiplicador                                            ; multiplicador    ; work         ;
+;    |bc:BlocoControlador|         ; 6 (6)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |multiplicador|bc:BlocoControlador                        ; bc               ; work         ;
+;    |bo:BlocoOperativo|           ; 32 (0)              ; 20 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |multiplicador|bo:BlocoOperativo                          ; bo               ; work         ;
+;       |igualazero:geraAz|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |multiplicador|bo:BlocoOperativo|igualazero:geraAz        ; igualazero       ; work         ;
+;       |igualazero:geraBz|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |multiplicador|bo:BlocoOperativo|igualazero:geraBz        ; igualazero       ; work         ;
+;       |mux2para1:mux1|           ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |multiplicador|bo:BlocoOperativo|mux2para1:mux1           ; mux2para1        ; work         ;
+;       |mux2para1:mux2|           ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |multiplicador|bo:BlocoOperativo|mux2para1:mux2           ; mux2para1        ; work         ;
+;       |registrador:regA|         ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |multiplicador|bo:BlocoOperativo|registrador:regA         ; registrador      ; work         ;
+;       |registrador:regB|         ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |multiplicador|bo:BlocoOperativo|registrador:regB         ; registrador      ; work         ;
+;       |registrador_r:regP|       ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |multiplicador|bo:BlocoOperativo|registrador_r:regP       ; registrador_r    ; work         ;
+;       |somadorsubtrator:somasub| ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |multiplicador|bo:BlocoOperativo|somadorsubtrator:somasub ; somadorsubtrator ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------+
+; State Machine - |multiplicador|bc:BlocoControlador|eAtual                         ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; Name      ; eAtual.S5 ; eAtual.S4 ; eAtual.S3 ; eAtual.S2 ; eAtual.S1 ; eAtual.S0 ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; eAtual.S0 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; eAtual.S1 ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
+; eAtual.S2 ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
+; eAtual.S3 ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
+; eAtual.S4 ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
+; eAtual.S5 ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++--------------------------------------------+----------------------------------------+
+; Register name                              ; Reason for Removal                     ;
++--------------------------------------------+----------------------------------------+
+; bo:BlocoOperativo|registrador:regB|q[4..7] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 4      ;                                        ;
++--------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 26    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 14    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |multiplicador ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BlocoOperativo ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BlocoOperativo|mux2para1:mux1 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BlocoOperativo|registrador_r:regP ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BlocoOperativo|registrador:regA ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BlocoOperativo|registrador:regB ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BlocoOperativo|igualazero:geraAz ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BlocoOperativo|igualazero:geraBz ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BlocoOperativo|mux2para1:mux2 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BlocoOperativo|mux2para1:mux3 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BlocoOperativo|somadorsubtrator:somasub ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "bo:BlocoOperativo|mux2para1:mux3" ;
++---------+-------+----------+---------------------------------+
+; Port    ; Type  ; Severity ; Details                         ;
++---------+-------+----------+---------------------------------+
+; b[7..1] ; Input ; Info     ; Stuck at GND                    ;
+; b[0]    ; Input ; Info     ; Stuck at VCC                    ;
++---------+-------+----------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bo:BlocoOperativo"                                                                        ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; enta[7..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; entb[7..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; conteudoa  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; conteudob  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 20                          ;
+; cycloneiii_ff         ; 26                          ;
+;     CLR               ; 6                           ;
+;     ENA               ; 12                          ;
+;     ENA CLR           ; 8                           ;
+; cycloneiii_lcell_comb ; 38                          ;
+;     arith             ; 8                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 7                           ;
+;     normal            ; 30                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 5                           ;
+;                       ;                             ;
+; Max LUT depth         ; 3.70                        ;
+; Average LUT depth     ; 2.66                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Jan 27 09:29:49 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multiplicador -c Multiplicador
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file somadorsubtrator.vhd
+    Info (12022): Found design unit 1: somadorsubtrator-estrutura File: D:/Quartus/quartus/bin64/Multiplicador/somadorsubtrator.vhd Line: 12
+    Info (12023): Found entity 1: somadorsubtrator File: D:/Quartus/quartus/bin64/Multiplicador/somadorsubtrator.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registrador_r.vhd
+    Info (12022): Found design unit 1: registrador_r-estrutura File: D:/Quartus/quartus/bin64/Multiplicador/registrador_r.vhd Line: 12
+    Info (12023): Found entity 1: registrador_r File: D:/Quartus/quartus/bin64/Multiplicador/registrador_r.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registrador.vhd
+    Info (12022): Found design unit 1: registrador-estrutura File: D:/Quartus/quartus/bin64/Multiplicador/registrador.vhd Line: 12
+    Info (12023): Found entity 1: registrador File: D:/Quartus/quartus/bin64/Multiplicador/registrador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux2para1.vhd
+    Info (12022): Found design unit 1: mux2para1-comportamento File: D:/Quartus/quartus/bin64/Multiplicador/mux2para1.vhd Line: 11
+    Info (12023): Found entity 1: mux2para1 File: D:/Quartus/quartus/bin64/Multiplicador/mux2para1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file igualazero.vhd
+    Info (12022): Found design unit 1: igualazero-estrutura File: D:/Quartus/quartus/bin64/Multiplicador/igualazero.vhd Line: 11
+    Info (12023): Found entity 1: igualazero File: D:/Quartus/quartus/bin64/Multiplicador/igualazero.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bo.vhd
+    Info (12022): Found design unit 1: bo-estrutura File: D:/Quartus/quartus/bin64/Multiplicador/bo.vhd Line: 21
+    Info (12023): Found entity 1: bo File: D:/Quartus/quartus/bin64/Multiplicador/bo.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file bc.vhd
+    Info (12022): Found design unit 1: bc-estrutura File: D:/Quartus/quartus/bin64/Multiplicador/bc.vhd Line: 18
+    Info (12023): Found entity 1: bc File: D:/Quartus/quartus/bin64/Multiplicador/bc.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file multiplicador.vhd
+    Info (12022): Found design unit 1: multiplicador-estrutura File: D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd Line: 20
+    Info (12023): Found entity 1: multiplicador File: D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file multiplicador_tb.vhd
+    Info (12022): Found design unit 1: multiplicador_tb-tb File: D:/Quartus/quartus/bin64/Multiplicador/multiplicador_tb.vhd Line: 11
+    Info (12023): Found entity 1: multiplicador_tb File: D:/Quartus/quartus/bin64/Multiplicador/multiplicador_tb.vhd Line: 7
+Info (12127): Elaborating entity "multiplicador" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at multiplicador.vhd(22): object "sA" assigned a value but never read File: D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd Line: 22
+Warning (10036): Verilog HDL or VHDL warning at multiplicador.vhd(22): object "sB" assigned a value but never read File: D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at multiplicador.vhd(24): used explicit default value for signal "zero" because signal was never assigned a value File: D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd Line: 24
+Info (12128): Elaborating entity "bc" for hierarchy "bc:BlocoControlador" File: D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd Line: 46
+Info (12128): Elaborating entity "bo" for hierarchy "bo:BlocoOperativo" File: D:/Quartus/quartus/bin64/Multiplicador/multiplicador.vhd Line: 47
+Warning (10540): VHDL Signal Declaration warning at bo.vhd(53): used explicit default value for signal "um" because signal was never assigned a value File: D:/Quartus/quartus/bin64/Multiplicador/bo.vhd Line: 53
+Info (12128): Elaborating entity "mux2para1" for hierarchy "bo:BlocoOperativo|mux2para1:mux1" File: D:/Quartus/quartus/bin64/Multiplicador/bo.vhd Line: 58
+Info (12128): Elaborating entity "registrador_r" for hierarchy "bo:BlocoOperativo|registrador_r:regP" File: D:/Quartus/quartus/bin64/Multiplicador/bo.vhd Line: 59
+Info (12128): Elaborating entity "registrador" for hierarchy "bo:BlocoOperativo|registrador:regA" File: D:/Quartus/quartus/bin64/Multiplicador/bo.vhd Line: 60
+Info (12128): Elaborating entity "igualazero" for hierarchy "bo:BlocoOperativo|igualazero:geraAz" File: D:/Quartus/quartus/bin64/Multiplicador/bo.vhd Line: 62
+Info (12128): Elaborating entity "somadorsubtrator" for hierarchy "bo:BlocoOperativo|somadorsubtrator:somasub" File: D:/Quartus/quartus/bin64/Multiplicador/bo.vhd Line: 66
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 72 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 52 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Thu Jan 27 09:29:58 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:16
+
+
